@@ -79,7 +79,7 @@ end
 
 
 
-
+local alarmset = false
 
 
 Citizen.CreateThread(function()
@@ -107,8 +107,15 @@ Citizen.CreateThread(function()
             else
                 farseviye = 0;
             end
-        
-            
+        	    if fuel < 20 then
+                        TriggerEvent("benzinuyari")
+                    else
+                        if fuel < 10 then
+                            TriggerEvent("benzinuyari")
+                        end
+                    end
+            	
+		
             SendNUIMessage({
                 carhud = 'arabada';
                 rpm = rpmmath;
@@ -127,8 +134,18 @@ Citizen.CreateThread(function()
 	end
 end)
 
-
-
-
-
-
+RegisterNetEvent("benzinuyari")
+AddEventHandler("benzinuyari",function()
+    if not alarmset then
+        alarmset = true
+        local i = 5
+        TriggerEvent("DoLongHudText", "Low fuel.",1)
+        while i > 0 do
+            PlaySound(-1, "5_SEC_WARNING", "HUD_MINI_GAME_SOUNDSET", 0, 0, 1)
+            i = i - 1
+            Citizen.Wait(300)
+        end
+        Citizen.Wait(60000)
+        alarmset = false
+    end
+end)
