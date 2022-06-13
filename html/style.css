@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,1800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,1800&display=swap');
+body {
+    display: none;
+    overflow: hidden;
+}
+
+.mainwrapper {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+.vehiclehud-left {
+    position: absolute;
+    background-color: transparent;
+    text-align: center;
+    width: 10vw;
+    height: 15vw;
+    top: 75%;
+    left: 85%;
+}
+
+.type {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    left: 5vw;
+    font-size: 1vw;
+    top: 4vw;
+}
+
+.speed {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 15vw;
+    font-size: 3.5vw;
+    font-weight: 800;
+    color: #fff;
+}
+
+.vehiclehud-right {
+    position: absolute;
+    background-color: transparent;
+    width: 5vw;
+    height: 15vw;
+    top: 75%;
+    left: 94%;
+}
+
+.line {
+    position: absolute;
+    background-color: #fff;
+    top: 4.5vw;
+    width: 0.2vw;
+    height: 5vw;
+}
+
+.gear {
+    position: absolute;
+    left: 1.5vw;
+    top: 4.5vw;
+    font-size: 2vw;
+    color: #ED3F3F;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.benzin {
+    position: absolute;
+    font-size: 1vw;
+    left: 1.5vw;
+    top: 8vw;
+    color: #fff;
+}
+
+.fuellevel {
+    position: absolute;
+    max-width: 0.1vw;
+    left: 2.8vw;
+    top: 7.1vw;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8vw;
+    color: #fff;
+}
+
+.vehiclehud-bottom {
+    position: absolute;
+    background-color: transparent;
+    width: 13vw;
+    height: 3vw;
+    top: 94%;
+    left: 86.5%;
+}
+
+
+/* .sinyaller {
+    position: absolute;
+    top: 0.7vw;
+}
+
+.fa-angle-left,
+.fa-angle-right {
+    color: #534F4E;
+    font-size: 1.2vw;
+    letter-spacing: 1vw;
+    font-weight: 800;
+}
+
+.fa-door-closed {
+    position: absolute;
+    color: #534F4E;
+    font-size: 1.2vw;
+    top: 0.7vw;
+    left: 4vw;
+    letter-spacing: 1vw;
+    font-weight: 800;
+} */
+
+.fa-lightbulb {
+    position: absolute;
+    color: #534F4E;
+    font-size: 1.2vw;
+    top: 0vw;
+    left: 8.5vw;
+    letter-spacing: 1vw;
+    font-weight: 800;
+}
+
+.fa-triangle-exclamation {
+    position: absolute;
+    color: #534F4E;
+    font-size: 1.2vw;
+    top: 0vw;
+    left: 11vw;
+    letter-spacing: 1vw;
+    font-weight: 800;
+}
+
+.playerhud {
+    position: absolute;
+    top: 2vw;
+    left: 1vw;
+    width: 10vw;
+    height: 15vw;
+    background-color: transparent;
+    float: left;
+}
+
+.hudback {
+    position: relative;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+    border-radius: 0.5vw;
+    width: 3vw;
+    height: 3vw;
+    background-color: rgba(83, 79, 78, 0.219);
+    transform: rotate(180deg);
+    float: left;
+}
+
+.can,
+.armor,
+.yemek,
+.su {
+    border-radius: 0.5vw;
+    width: 3vw;
+    height: 50%;
+    background-color: #ffffff;
+}
+
+.fa-heart,
+.fa-shield-halved,
+.fa-burger {
+    position: absolute;
+    transform: rotate(180deg);
+    color: rgba(83, 79, 78, 0.219);
+    left: 1vw;
+    top: 1vw;
+    font-size: 1vw;
+}
+
+.fa-bottle-water {
+    position: absolute;
+    transform: rotate(180deg);
+    color: rgba(83, 79, 78, 0.219);
+    left: 1.1vw;
+    top: 1vw;
+    font-size: 1vw;
+}
