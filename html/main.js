@@ -6,33 +6,27 @@ window.addEventListener("message", function(event) {
                 //
             if (vehicle.gear == 0 && vehicle.rpm > 1) {
                 $('.gear').text(`R`)
-                $(".gear").css({"color":`red`})
             } else if (vehicle.gear == 0) {
                 $('.gear').text(`P`)
-                $(".gear").css({"color":`white`})
             } else if (vehicle.gear > 0) {
                 $('.gear').text(vehicle.gear)
-                $(".gear").css({"color":`#23FF00`})
             }
             //
 
             //
-
             var speedsInt = vehicle.speed.toFixed()
             if (vehicle.speed < 10) {
                 $('.speed').text("00" + speedsInt)
-                $(".speed").css({"color":`white`})
             } else if (vehicle.speed < 100) {
                 $('.speed').text("0" + speedsInt)
-                $(".speed").css({"color":`white`})
             } else if (vehicle.speed > 100) {
                 $('.speed').text(speedsInt)
             }
-            
+
             //
             $('.fuellevel').text(vehicle.fuel + "%")
             if (vehicle.fuel < 100) {
-                $(".benzin").css({"color":`white`})
+
 
                 $(".fuellevel").text("%" + vehicle.fuel)
                 $(document).ready(function() {
@@ -45,8 +39,6 @@ window.addEventListener("message", function(event) {
                     });
 
                 })
-            } else if (vehicle.fuel < 20) {
-                $(".benzin").css({"color":`red`})
             }
             //
 
@@ -75,6 +67,7 @@ window.addEventListener("message", function(event) {
             $('body').css({ 'display': `none` })
             break
     }
+
 
 
 });
